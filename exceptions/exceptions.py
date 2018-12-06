@@ -105,6 +105,19 @@ def parse_name(full_name):
     }
 
 
+def parse_phone_number(full_number):
+    fields = full_number.split('-')
+    if len(fields) == 3:
+        area, exchange, last4 = fields
+        if len(area) == 3 and len(exchange) == 3 and len(last4) == 4:
+            return {
+                'area': area,
+                'exchange': exchange,
+                'last4': last4,
+            }
+    raise ValueError('Invalid format: ' + full_number)
+
+
 # Do not edit any code below this line!
 
 if __name__ == '__main__':
