@@ -95,6 +95,16 @@ def get_index_or_default(mapping, key, default):
         return default
 
 
+def parse_name(full_name):
+    parts = full_name.split()
+    if len(parts) != 2:
+        raise ValueError('Cannot split name: ' + full_name)
+    return {
+        'first': parts[0],
+        'last': parts[1],
+    }
+
+
 # Do not edit any code below this line!
 
 if __name__ == '__main__':
