@@ -93,6 +93,18 @@ parser1 = argparse.ArgumentParser()
 parser1.add_argument('filename')
 parser1.add_argument('destination')
 
+parser2 = argparse.ArgumentParser()
+parser2.add_argument('filename')
+parser2.add_argument('--type', default='text')
+
+parser3 = argparse.ArgumentParser()
+parser3.add_argument('input')
+parser3.add_argument('--limit', default=100, type=int)
+
+parser4 = argparse.ArgumentParser()
+parser4.add_argument('-i', '--ignore-duplicates', default=False, action='store_true')
+parser4.add_argument('input')
+parser4.add_argument('output')
 
 # Do not edit any code below this line!
 
