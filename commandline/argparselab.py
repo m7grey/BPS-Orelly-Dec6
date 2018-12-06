@@ -87,6 +87,11 @@ False
 
 # Write your code here:
 
+import argparse
+
+parser1 = argparse.ArgumentParser()
+parser1.add_argument('filename')
+parser1.add_argument('destination')
 
 
 # Do not edit any code below this line!
