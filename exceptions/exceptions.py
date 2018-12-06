@@ -85,15 +85,21 @@ ValueError: Invalid format: 415-555
 
 '''
 
+
 # Write your code here:
 
-
+def get_index_or_default(mapping, key, default):
+    try:
+        return mapping[key]
+    except IndexError:
+        return default
 
 
 # Do not edit any code below this line!
 
 if __name__ == '__main__':
     import doctest
+
     count, _ = doctest.testmod()
     if count == 0:
         print('*** ALL TESTS PASS ***\nGive someone a HIGH FIVE!')
